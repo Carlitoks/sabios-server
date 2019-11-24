@@ -39,7 +39,7 @@ export class UserController {
     }
 
     @Get('users')
-    @Roles(RoleType.Admin)
+    @Roles(RoleType.User)
     @HttpCode(HttpStatus.OK)
     @ApiResponse({
         status: HttpStatus.OK,

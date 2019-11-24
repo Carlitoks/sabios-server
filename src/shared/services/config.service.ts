@@ -61,7 +61,7 @@ export class ConfigService {
             entities,
             migrations,
             keepConnectionAlive: true,
-            type: 'postgres',
+            type: 'mysql',
             host: this.get('POSTGRES_HOST'),
             port: this.getNumber('POSTGRES_PORT'),
             username: this.get('POSTGRES_USERNAME'),

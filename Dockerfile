@@ -14,7 +14,7 @@ RUN yarn install --prod
 
 FROM node:dubnium
 
-ARG PORT=3000
+ARG PORT=8000
 
 RUN mkdir -p /usr/src/app
 

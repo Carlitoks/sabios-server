@@ -112,10 +112,10 @@ Download docker from [Official website](https://docs.docker.com/compose/install)
 Open terminal and navigate to project directory and run the following command.
 
 ```bash
-PORT=3000 docker-compose up
+PORT=8000 docker-compose up
 ```
 
-> Note: application will run on port 3000 (<http://localhost:3000>)
+> Note: application will run on port 8000 (<http://localhost:8000>)
 
 Navigate to <http://localhost:8080> and connect to you database with the following configurations
 
