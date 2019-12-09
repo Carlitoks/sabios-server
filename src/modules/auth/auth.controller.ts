@@ -60,13 +60,14 @@ export class AuthController {
     async userRegister(
         @Body() userRegisterDto: UserRegisterDto,
         @UploadedFile() file: IFile,
-    ): Promise<UserDto> {
+    ): Promise<LoginPayloadDto> {
         const createdUser = await this.userService.createUser(
             userRegisterDto,
             file,
         );
 
-        return createdUser.toDto();
+        const token = await this.authService.createToken(createdUser);
+        return new LoginPayloadDto(createdUser.toDto(), token);
     }
 
     @Get('me')
